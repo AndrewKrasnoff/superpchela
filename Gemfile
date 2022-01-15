@@ -22,6 +22,11 @@ group :development do
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'spring'
   gem 'web-console', '>= 4.1.0'
+
+  gem 'capistrano', '~> 3.11'
+  gem 'capistrano-passenger', '~> 0.2.0'
+  gem 'capistrano-rails', '~> 1.4'
+  gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
 end
 
 group :test do
@@ -39,8 +44,3 @@ gem 'solidus_paypal_commerce_platform'
 gem 'kaminari-i18n', '~> 0.5.0'
 gem 'rails-i18n', '~> 6.0'
 gem 'solidus_i18n', '~> 2.0'
-
-gem 'capistrano', '~> 3.11'
-gem 'capistrano-passenger', '~> 0.2.0'
-gem 'capistrano-rails', '~> 1.4'
-gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'

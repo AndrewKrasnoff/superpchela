@@ -1,1 +1,10 @@
 <%# solidus_auth_devise or a custom auth system can replace this partial %>
+<% if spree_user_signed_in? %>
+  <%= link_to 'МОЙ АККАУНТ', account_path %>
+  <% if spree_user_signed_in? && spree_current_user.admin? %>
+    <%= link_to ' | АДМИН', admin_path %>
+  <% end %>  
+  <%= link_to ' | ВЫХОД', destroy_spree_user_session_path, method: :delete %>
+<% else %>
+  <%= link_to 'ВОЙТИ', spree_user_session_path %>
+<% end %>
