@@ -37,10 +37,25 @@ end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'solidus', '~> 3.1'
 gem 'solidus_auth_devise'
 gem 'solidus_paypal_commerce_platform'
+gem 'solidus_core'
+gem 'solidus_api'
+gem 'solidus_backend'
+gem 'solidus_sample'
 
 gem 'kaminari-i18n', '~> 0.5.0'
 gem 'rails-i18n', '~> 6.0'
 gem 'solidus_i18n', '~> 2.0'
+gem 'canonical-rails'
+gem 'solidus_support'
+gem 'truncate_html'
+gem 'view_component', require: 'view_component/engine'
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'apparition', '~> 0.6.0'
+  gem 'rails-controller-testing', '~> 1.0.5'
+  gem 'rspec-activemodel-mocks', '~> 1.1.0'
+  gem 'solidus_dev_support', '~> 2.5'
+end
