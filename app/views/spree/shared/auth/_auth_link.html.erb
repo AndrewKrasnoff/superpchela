@@ -1,5 +1,9 @@
 <% if spree_current_user %>
   <%= link_to I18n.t('spree.my_account'), spree.account_path, class: 'auth-link' %>
+  <%= link_to 'ВЫХОД', destroy_spree_user_session_path, method: :delete, class: 'auth-link' %>
+  <% if spree_current_user.admin? %>
+    <%= link_to 'АДМИН', spree.admin_path, class: 'auth-link' %>
+  <% end %>
 <% else %>
   <%= link_to I18n.t('spree.login'), spree.login_path, class: 'auth-link' %>
 <% end %>
